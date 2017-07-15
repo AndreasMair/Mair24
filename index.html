@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head profile="http://gmpg.org/xfn/11"> 
+	<title>mair24.de</title> 
+	<!-- Für Facebook mit Bild -->
+	<meta property="og:type"             content="website" />
+	<meta property="og:url"              content="http://www.mair24.de/" />
+	<meta property="og:title"            content="Mair24" /> 
+	<meta property="og:description"      content="Homepage der Familie Mair" />
+	<meta property="og:image"            content="http://www.mair24.de/image/thumb3.jpg" /> 
+	<meta property="og:image:secure_url" content="https://www.mair24.de/image/thumb3.jpg" />
+	<meta property="og:image:type"       content="image/jpeg" />
+	<meta property="og:image:width"      content="174" /> 
+	<meta property="og:image:height"     content="116" />
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<link rel="stylesheet" href="css/lib.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<!-- Google Hosted jQuery Core -->
+	<script src="http://www.google.com/jsapi"></script>
+	<script>google.load("jquery", "1");</script>
+
+	<script src="js/jquery.ez-bg-resize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib.js" type="text/javascript" charset="utf-8"></script>
+	
+<script type="text/javascript"> 
+$(document).ready(function(){
+ 
+//Larger thumbnail preview 
+ 
+$("ul.thumb li").hover(function() {
+	$(this).css({'z-index' : '10'});
+	$(this).find('img').addClass("hover").stop()
+		.animate({
+			marginTop: '-110px', 
+			marginLeft: '-110px', 
+			top: '50%', 
+			left: '50%', 
+			width: '174px', 
+			height: '174px',
+			padding: '20px' 
+		}, 200);
+	
+	} , function() {
+	$(this).css({'z-index' : '0'});
+	$(this).find('img').removeClass("hover").stop()
+		.animate({
+			marginTop: '0', 
+			marginLeft: '0',
+			top: '0', 
+			left: '0', 
+			width: '100px', 
+			height: '100px', 
+			padding: '5px'
+		}, 400);
+});
+ 
+//Swap Image on Click
+	$("ul.thumb li a").click(function() {
+		
+		var mainImage = $(this).attr("href"); //Find Image Name
+		$("#body-background img").attr({ src: mainImage });
+		return false;		
+	});
+ 
+});
+</script> 
+
+
+
+</head>
+<body>
+	<div id="container">
+		<h1>Hi, willkommen auf der Homepage der Familie Mair.</h1>
+		<p><a href="http://www.mair24.de/">www.mair24.de</a></p>
+
+		<p>Du kannst auf die Bilder unten clicken und schon erblickst du die beiden tollsten Kerle. Wow. Noch mehr Action findest du auf meinem aktuellen Projekthomepage singles-im-laendle.de, die ich selbst zusammengeflickt habe. Viel Spass. Anmelden ist kostenlos.</p>
+
+		<ul class="stat">
+			<li><a href="http://schlummerhausen.de"><span class="large"></span><br /><span class="small">Schlummerhausen.de</span></a></li> 
+			<li><a href="http://schlummerhausen.de"><span class="large">Enter</span><br /><span class="small"></span></a></li> 
+			<li><a href="http://schlummerhausen.de"><span class="large"></span><br /><span class="small">Schlummerhausen.de</span></a></li> 
+		</ul>
+
+		
+		<!--<p>We can also be found on <a href="http://www.facebook.com/mair.andi">facebook</a>, <a href="http://www.xing.com/profile/Andreas_Mair4">XING</a>, <a href="http://www.icq.com/people/45376924/">ICQ</a> and <a href="http://www.skype.com">skype andi1978m</a></p>-->
+
+
+		<ul class="thumb">
+			<li><a href="image/main_image1.jpg"><img src="image/thumb1.jpg" alt="" /></a></li> 
+			<li><a href="image/main_image2.jpg"><img src="image/thumb2.jpg" alt="" /></a></li> 
+			<li><a href="image/main_image3.jpg"><img src="image/thumb3.jpg" alt="" /></a></li> 
+		</ul>
+
+		<p>Feel free to <a href="mailto:andreas@mair24.de">contact us</a>.</p> 
+
+	</div>
+	
+	<div id="body-background"><img src="image/main_image1.jpg" alt="Bg"></div>
+</body>
+</html>
+
